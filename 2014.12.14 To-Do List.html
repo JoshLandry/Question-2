@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>To-Do List</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  		<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+		<style></style>
+	</head>
+	<body>
+		<h1>Add items to your to-do list below.</h1> <br>
+		<input type="text" size="32"></input> <br>
+		<button>Add to List</button> <br>
+		<div id="list">
+			<h3> To-Do: </h3>
+			<ol>
+			</ol>
+		</div>
+		<script>
+			$('button').on('click', function() {
+			var newItem = '<li>' + $('input').val() + '</li>';
+			$('ol').append(newItem)
+
+				$('li').on('click', function() {
+				this.remove()
+				});
+			});
+
+
+		</script>
+	</body>
+</html>
